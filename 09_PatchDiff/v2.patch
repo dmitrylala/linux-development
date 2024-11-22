@@ -1,0 +1,12 @@
+117,118c117,118
+<     if (argc != 2) {
+<         printf("Usage: ./main MAZE_LENGTH");
+---
+>     if (argc != 3) {
+>         printf("Usage: ./main 'PATHWALL' MAZE_LENGTH");
+120c120,122
+<     len = atoi(argv[1]);
+---
+>     path = argv[1][0];
+>     wall = argv[1][1];
+>     len = atoi(argv[2]);
