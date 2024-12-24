@@ -1,0 +1,36 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.71])
+AC_INIT([libbuf], [1.0], [])
+AC_CONFIG_SRCDIR([src/buf.h])
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE([foreign])
+LT_INIT([disable-static])
+
+# Checks for programs.
+AC_PROG_CC
+s
+PKG_CHECK_MODULES([CHECK],[check])
+
+# Variable definitins
+AC_SUBST(CK_VERBOSITY, verbose)
+AC_ARG_VAR(CK_VERBOSITY, [Default: "verbose", can be "silent", "minimal" or "normal")])
+
+# Enabe/disable things
+AC_ARG_ENABLE([gcov],
+              [AS_HELP_STRING([--enable-gcov], [use Gcov to test the test suite])],
+              [], [enable_gcov=no])
+AM_CONDITIONAL([COND_GCOV],[test '!' "$enable_gcov" = no])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_CHECK_TYPES([ptrdiff_t])
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+
+AC_CONFIG_FILES([Makefile
+                 src/Makefile
+                 tests/Makefile])
+AC_OUTPUT
