@@ -9,5 +9,5 @@ build:
 
 run: build
 	docker run -it --rm \
-		--name $(IMAGE_TAG) \
+		--name $(CON_NAME) \
 		$(IMAGE_NAME):$(IMAGE_TAG)

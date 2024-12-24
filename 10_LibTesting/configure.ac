@@ -10,7 +10,7 @@ LT_INIT([disable-static])
 
 # Checks for programs.
 AC_PROG_CC
-s
+
 PKG_CHECK_MODULES([CHECK],[check])
 
 # Variable definitins
