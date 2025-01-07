@@ -15,7 +15,7 @@ IT_PROG_INTLTOOL
 # Checks for libraries.
 
 # Checks for header files.
-AC_CHECK_HEADERS([libintl.h locale.h stdlib.h])
+AC_CHECK_HEADERS([libintl.h locale.h stdlib.h ctype.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 

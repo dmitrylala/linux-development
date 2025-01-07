@@ -9,5 +9,4 @@ GENERATES = *~ Makefile Makefile.in aclocal.m4 autom4te.cache m4 compile \
 
 clean:
 	make -C src/ clean
-	make -C po/ clean
 	rm -rf $(GENERATES)
