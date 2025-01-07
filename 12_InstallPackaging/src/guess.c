@@ -10,6 +10,16 @@
 #define MAX_LENGTH 100
 
 
+/** @mainpage Guess whether string is palindrome
+
+    The user inputs some string and the programs tells whether string
+    is palindrome or not.
+
+    Usage:
+    \code{.unparsed}
+    guess <string>
+    \endcode
+*/
 int main(int argc, char *argv[]) {
 	setlocale (LC_ALL, "");
 	bindtextdomain (PACKAGE, LOCALE_PATH);

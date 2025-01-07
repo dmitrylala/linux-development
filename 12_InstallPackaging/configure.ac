@@ -1,7 +1,8 @@
 AC_PREREQ([2.69])
-AC_INIT([guess], [1.0], [dim.nesterov2017@gmail.com])
+AC_INIT([Guessing palindrome], [1.0], [dim.nesterov2017@gmail.com], [guess])
 AM_INIT_AUTOMAKE([foreign])
 LT_INIT([disable-static])
+DX_INIT_DOXYGEN([guess])
 
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_REQUIRE_VERSION(0.21)
@@ -33,5 +34,6 @@ AC_CONFIG_FILES([
     lib/Makefile
     po/Makefile.in
     tests/Makefile
+    Doxyfile
 ])
 AC_OUTPUT
