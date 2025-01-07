@@ -3,9 +3,32 @@
 #include <stdlib.h>
 #include <libintl.h>
 #include <locale.h>
+#include <ctype.h>
+
 #include "config.h"
 
 #define _(STRING) gettext(STRING)
+#define MAX_LENGTH 100
+
+
+int is_palindrome(const char *s) {
+    int left = 0;
+    int right = strlen(s) - 1;
+
+    while (left < right) {
+        // skip non-alphanumeric symbols
+        while (left < right && !isalnum(s[left])) left++;
+        while (left < right && !isalnum(s[right])) right--;
+        
+        // compare lowercase
+        if (tolower(s[left]) != tolower(s[right])) {
+            return 0;
+        }
+        left++;
+        right--;
+    }
+    return 1;
+}
 
 
 int main(int argc, char *argv[]) {
@@ -13,29 +36,18 @@ int main(int argc, char *argv[]) {
 	bindtextdomain (PACKAGE, LOCALE_PATH);
 	textdomain (PACKAGE);
 
-	printf(_("Think of a number from 1 to 100.\n"));
+    printf(_("Check if your string is a palindrome!\n"));
 
-    int left = 1;
-    int right = 100;
-    char answer[5];
-	while (left < right) {
-        int mid = (left + right) / 2;
-    
-		printf(_("Is your number greater than %d?\n"), mid);
-        if (scanf("%s", answer) < 0) {
-            return EXIT_FAILURE;
-        }
+    char input[MAX_LENGTH];
+    printf(_("Enter your string: "));
+    fgets(input, MAX_LENGTH, stdin);
+    input[strlen(input)-1] = '\0';
 
-        if (strcmp(answer, _("yes")) == 0) {
-            left = mid + 1;
-        } else if (strcmp(answer, _("no")) == 0) {
-            right = mid;
-        } else {
-            printf(_("Please type yes or no.\n"));
-        }
+    if (is_palindrome(input)) {
+        printf(_("It is palindrome!\n"));
+    } else {
+        printf(_("It is not palindrome :(\n"));
     }
-
-    printf(_("Your number is %d.\n"), left);
 
     return EXIT_SUCCESS;
 }

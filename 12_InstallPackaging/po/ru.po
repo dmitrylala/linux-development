@@ -1,15 +1,15 @@
-# Russian translations for guess package.
-# Copyright (C) 2025 THE guess'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the guess package.
-# root <root@e5dcc6b3e2f6>, 2025.
+# Russian translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# ubuntu <ubuntu@ubuntu>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: guess 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 12:11+0000\n"
-"PO-Revision-Date: 2025-01-06 10:15+0000\n"
-"Last-Translator: root <root@e5dcc6b3e2f6>\n"
+"POT-Creation-Date: 2025-01-07 12:57+0000\n"
+"PO-Revision-Date: 2025-01-07 12:38+0000\n"
+"Last-Translator: ubuntu <ubuntu@ubuntu>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,30 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../src/guess.c:16
+#: ../src/guess.c:39
 #, c-format
-msgid "Think of a number from 1 to 100.\n"
-msgstr "Загадайте число от 1 до 100.\n"
+msgid "Check if your string is a palindrome!\n"
+msgstr "Проверь является ли твоя строка палиндромом!\n"
 
-#: ../src/guess.c:24
+#: ../src/guess.c:42
 #, c-format
-msgid "Is your number greater than %d?\n"
-msgstr "Ваше число больше чем %d?\n"
+msgid "Enter your string: "
+msgstr "Введи свою строку: "
 
-#: ../src/guess.c:29
-msgid "yes"
-msgstr "да"
-
-#: ../src/guess.c:31
-msgid "no"
-msgstr "нет"
-
-#: ../src/guess.c:34
+#: ../src/guess.c:47
 #, c-format
-msgid "Please type yes or no.\n"
-msgstr "Пожалуйста введите да или нет\n"
+msgid "It is palindrome!\n"
+msgstr "Это палиндром!\n"
 
-#: ../src/guess.c:38
+#: ../src/guess.c:49
 #, c-format
-msgid "Your number is %d.\n"
-msgstr "Вы загадали число %d\n"
+msgid "It is not palindrome :(\n"
+msgstr "Это не палиндром :(\n"
