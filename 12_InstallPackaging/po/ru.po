@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guess 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 12:57+0000\n"
+"POT-Creation-Date: 2025-01-07 18:37+0000\n"
 "PO-Revision-Date: 2025-01-07 12:38+0000\n"
 "Last-Translator: ubuntu <ubuntu@ubuntu>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
@@ -18,22 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../src/guess.c:39
+#: ../src/guess.c:18
 #, c-format
 msgid "Check if your string is a palindrome!\n"
 msgstr "Проверь является ли твоя строка палиндромом!\n"
 
-#: ../src/guess.c:42
+#: ../src/guess.c:19
 #, c-format
 msgid "Enter your string: "
 msgstr "Введи свою строку: "
 
-#: ../src/guess.c:47
+#: ../src/guess.c:23
+#, c-format
+msgid "Error reading string\n"
+msgstr "Ошибка при чтении строки\n"
+
+#: ../src/guess.c:29
 #, c-format
 msgid "It is palindrome!\n"
 msgstr "Это палиндром!\n"
 
-#: ../src/guess.c:49
+#: ../src/guess.c:31
 #, c-format
 msgid "It is not palindrome :(\n"
 msgstr "Это не палиндром :(\n"
